@@ -21,7 +21,7 @@
     </tr>
   </thead>
   @foreach($hotels as $hotel)
-  		 {{ $city = App\Hotel::find($hotel->id)->city }} 
+  		 @php $city = App\Hotel::find($hotel->id)->city @endphp
 	  <tbody>
 	    <tr>
 	      <th scope="row">{{ $hotel->id }}</th>
