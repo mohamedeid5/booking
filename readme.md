@@ -6,3 +6,5 @@ to create admin or user go to /admin/admins/create - /users/create becuase there
 admin login. 
 email: admin@booking.com -
 password: admin
+--
+no register for users you can add from admin.
