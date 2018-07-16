@@ -32,6 +32,8 @@ class LoginController extends Controller
             return redirect('/');
         } elseif (auth()->guard('admin')->attempt(['email'=>request('email'),'password'=>request('password')],$remember)) {
             return redirect('/');
+        } else {
+            return redirect('login');
         }
     }
 
