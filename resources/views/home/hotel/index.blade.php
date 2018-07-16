@@ -37,8 +37,8 @@
 	      <td>{{ $hotel->from }}</td>
 	      <td>{{ $hotel->to }}</td>
         <td>
-          <a href="{{ url('hotels/'.$hotel->id.'/edit') }}" class="btn btn-primary">edit</a>
-          <form action="{{ url('hotels/'.$hotel->id) }}" method="post" class="form-group">
+          <a href="{{ url('admin/hotels/'.$hotel->id.'/edit') }}" class="btn btn-primary">edit</a>
+          <form action="{{ url('admin/hotels/'.$hotel->id) }}" method="post" class="form-group">
             @csrf
            {{ method_field('DELETE') }}
             <input type="submit" value="delete" class="btn btn-danger">
