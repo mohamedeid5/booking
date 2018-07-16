@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-	<form action="{{ url('hotels/'.$hotel->id) }}" method="post" class="form-group">
+	<form action="{{ url('admin/hotels/'.$hotel->id) }}" method="post" class="form-group">
 		@csrf
 		{{ method_field('PUT') }}
 		<label for="">Hotel Name</label>
