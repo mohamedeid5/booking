@@ -2,7 +2,7 @@
 @section('content')
 	
 	<div class="container">
-		<a href="{{ url('city/create') }}" class="btn btn-primary">Add City</a>
+		<a href="{{ url('admin/city/create') }}" class="btn btn-primary">Add City</a>
 		<table class="table">
 		 <thead class="thead-dark">
 		    <tr>
