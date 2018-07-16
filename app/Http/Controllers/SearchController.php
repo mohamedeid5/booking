@@ -1,13 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use DB;
+
 use App\Hotel;
 use App\City;
-use App\Book;
-use App\User;
-use Illuminate\Http\Request;
-
 class SearchController extends Controller
 {
 
@@ -47,10 +43,9 @@ class SearchController extends Controller
         return view('home.search.result', compact('hotels'));
     }
 
-    //for search box
+    //for search box ajax reuest.
     public function citysearch() {
          $hotels = City::where('name','like','%'.request('city').'%')->get();
-            
             foreach($hotels as $hotel){
                 return $hotel->name;
         }
