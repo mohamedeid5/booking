@@ -16,15 +16,9 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+                       
                         @auth
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @else
-                            <li class="list-group" style="padding-top: 8px;">
+                           <li class="list-group" style="padding-top: 8px;">
                                 <span class="btn btn-primary">{{  ip()->iso_code }}</span>
                             </li>
                              <li class="list" style="padding-top: 8px;">
@@ -61,6 +55,13 @@
 
                               </div>
                             </div>
+                        @else
+                              <li class="nav-item">
+                                <a class="nav-link" href="{{ url('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('register') }}">{{ __('Register') }}</a>
+                            </li>
                             @endauth
                     </ul>
                 </div>
