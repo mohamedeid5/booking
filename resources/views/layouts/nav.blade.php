@@ -16,8 +16,8 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                       
-                        @auth
+
+                        @if(auth()->guard('admin')->check() || auth()->check())
                            <li class="list-group" style="padding-top: 8px;">
                                 <span class="btn btn-primary">{{  ip()->iso_code }}</span>
                             </li>
@@ -62,7 +62,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('register') }}">{{ __('Register') }}</a>
                             </li>
-                            @endauth
+                            @endif
                     </ul>
                 </div>
             </div>
