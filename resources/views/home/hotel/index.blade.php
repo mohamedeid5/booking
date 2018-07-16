@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-  <a href="{{ url('hotels/create') }}" class="btn btn-primary">Add Hotel</a>
+  <a href="{{ url('admin/hotels/create') }}" class="btn btn-primary">Add Hotel</a>
 	<table class="table">
   <thead class="thead-dark">
     <tr>
